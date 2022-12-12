@@ -4,32 +4,115 @@
         <name>Library</name>
     </assembly>
     <members>
-        <member name="T:ClassLibrary.Train">
+        <member name="T:Library.AND">
             <summary>
-            Esta clase representa un tren muy básico.
+            Clase AND
             </summary>
         </member>
-        <member name="P:ClassLibrary.Train.IsEngineStarted">
+        <member name="M:Library.AND.#ctor(System.String)">
             <summary>
-            Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
+            Constructor de AND.
             </summary>
-            <value><c>true</c> si las máquinas fueron encendidas, <c>false</c> en caso contrario.</value>
+            <param name="nombre"></param>
         </member>
-        <member name="M:ClassLibrary.Train.StartEngines">
+        <member name="M:Library.AND.Calculate">
             <summary>
-            Enciende las máquinas del tren.
+            Metodo calculate que devuelve un booleano
             </summary>
-            <returns>
-            <c>true</c> si las máquinas pueden ser encendidas, <c>false</c> en caso contrario.
-            </returns>
         </member>
-        <member name="M:ClassLibrary.Train.StopEngines">
+        <member name="T:Library.Gate">
             <summary>
-            Detiene las máquinas del tren.
+            Clase abstract Gate
             </summary>
-            <returns>
-            <c>true</c> si las máquinas pueden ser detenidas, <c>false</c> en caso contrario.
-            </returns>
+        </member>
+        <member name="M:Library.Gate.#ctor(System.String)">
+            <summary>
+            Constructor de Gate.
+            </summary>
+            <param name="nombre"></param>
+        </member>
+        <member name="P:Library.Gate.Nombre">
+            <summary>
+            Propiedad string nombre
+            </summary>
+        </member>
+        <member name="P:Library.Gate.ListaEntradas">
+            <summary>
+            Propiedad diccionario ListaEntradas
+            </summary>
+        </member>
+        <member name="M:Library.Gate.Calculate">
+            <summary>
+            Metodo calculate que devuelve un booleano
+            </summary>
+        </member>
+        <member name="M:Library.Gate.AgregarEntrada(System.String,Library.IInput)">
+            <summary>
+            Metodo que agrega entradas a la ListaEntradas
+            </summary>
+            <param name="nombre"></param>
+            <param name="valor"></param>
+        </member>
+        <member name="T:Library.IInput">
+            <summary>
+            Interfaz IInput
+            </summary>
+        </member>
+        <member name="M:Library.IInput.Calculate">
+            <summary>
+            Metodo calculate que devuelve un booleano
+            </summary>
+        </member>
+        <member name="T:Library.LogicInput">
+            <summary>
+            Clase LogicInput
+            </summary>
+        </member>
+        <member name="P:Library.LogicInput.salida">
+            <summary>
+            Propiedad bool salida
+            </summary>   
+        </member>
+        <member name="M:Library.LogicInput.#ctor(System.Boolean)">
+            <summary>
+            Constructor de Logic Input
+            </summary>
+            <param name="valor"></param>
+        </member>
+        <member name="M:Library.LogicInput.Calculate">
+            <summary>
+            Metodo calculate que devuelve un booleano
+            </summary>
+        </member>
+        <member name="T:Library.NOT">
+            <summary>
+            Clase NOT
+            </summary>
+        </member>
+        <member name="M:Library.NOT.#ctor(System.String)">
+            <summary>
+            Constructor de NOT
+            </summary>
+        </member>
+        <member name="M:Library.NOT.Calculate">
+            <summary>
+            Metodo calculate que devuelve un booleano
+            </summary>
+        </member>
+        <member name="T:Library.OR">
+            <summary>
+            Clase OR.
+            </summary>
+        </member>
+        <member name="M:Library.OR.#ctor(System.String)">
+            <summary>
+            Constructor de OR
+            </summary>
+        </member>
+        <member name="M:Library.OR.Calculate">
+            <summary>
+            Metodo calculate que devuelve un booleano
+            </summary>
         </member>
     </members>
 </doc>
