@@ -14,6 +14,10 @@ namespace Library
         /// <param name="nombre"></param>
         public Gate(string nombre)
         {
+            if(String.IsNullOrEmpty(nombre))
+            {
+                throw new ExceptionInput("El nombre no puede estar vacio");
+            }
             this.Nombre = nombre;
             this.ListaEntradas = new Dictionary<string, IInput>();
         }

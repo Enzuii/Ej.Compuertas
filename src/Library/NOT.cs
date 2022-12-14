@@ -24,7 +24,7 @@ public class NOT : Gate
         
         if(ListaEntradas.Count != 1)
         {
-            throw new System.Exception("La compuerta no tiene 1 entrada");
+            throw new ExceptionInput("La compuerta no tiene 1 entrada");
         }
 
         foreach (IInput c in ListaEntradas.Values)

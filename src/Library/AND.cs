@@ -27,7 +27,7 @@ public class AND : Gate
         
         if(ListaEntradas.Count != 2)
         {
-            throw new System.Exception("La compuerta no tiene 2 entradas");
+            throw new ExceptionInput("La compuerta no tiene 2 entradas");
         }
         
         foreach(IInput c in ListaEntradas.Values)

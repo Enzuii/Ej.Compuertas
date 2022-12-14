@@ -31,6 +31,16 @@ namespace Tests
             and1.AgregarEntrada("A", True);
             and1.AgregarEntrada("B", False);
             Assert.AreEqual(false, and1.Calculate());
+            try
+            {
+                and1.AgregarEntrada("C", True);
+                and1.Calculate();
+                Assert.Fail();
+            }
+            catch(ExceptionInput e)
+            {
+                Assert.Pass();
+            }
         
         }
         
@@ -45,6 +55,17 @@ namespace Tests
             or2.AgregarEntrada("A", True);
             or2.AgregarEntrada("B", False);
             Assert.AreEqual(true, or2.Calculate());
+            try
+            {
+                or2.AgregarEntrada("C", True);
+                or2.Calculate();
+                Assert.Fail();
+            }
+            catch(ExceptionInput e)
+            {
+                Assert.Pass();
+            }
+
         }
         
         /// <summary>
@@ -56,6 +77,16 @@ namespace Tests
             NOT not3 = new NOT("NOT-3");
             not3.AgregarEntrada("A", True);
             Assert.AreEqual(false, not3.Calculate());
+            try
+            {
+                not3.AgregarEntrada("B", True);
+                not3.Calculate();
+                Assert.Fail();
+            }
+            catch(ExceptionInput e)
+            {
+                Assert.Pass();
+            }
         }
         
         /// <summary>

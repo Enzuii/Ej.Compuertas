@@ -20,6 +20,18 @@
             Metodo calculate que devuelve un booleano
             </summary>
         </member>
+        <member name="T:Library.ExceptionInput">
+            <summary>
+            Clase ExceptionInput crea una excepción personalizada para este caso 
+            </summary>
+        </member>
+        <member name="M:Library.ExceptionInput.#ctor(System.String)">
+            <summary>
+            Constructor de ExceptionInput
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
         <member name="T:Library.Gate">
             <summary>
             Clase abstract Gate
